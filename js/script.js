@@ -14,14 +14,14 @@ function submit() {
 	//If statement to make sure max > min
 	if ((numb1 >= 0) && (numb2 >= 0)) {
 		//For loop for counter
-		for (let counter = 0; counter < num1; counter++) {
-			sum = sum + num2
+		for (let counter = 0; counter < numb1; counter++) {
+			sum = sum + numb2
 		}
 	} else {
 		document.getElementById('error').innerHTML = "Please make sure your numbers are larger or equal to 0"
-		}
+		document.getElementById('numbers').innerHTML = ""
+	}
 
 	//Displays answer
 	document.getElementById('numbers').innerHTML = "The product is " + sum
 }
-
