@@ -12,16 +12,13 @@ function submit() {
 	let sum = 0
 
 	//If statement to make sure max > min
-	if ((numb1 >= 0) && (numb2 >= 0)) {
+	if (numb1 >= 0 && numb2 >= 0) {
 		//For loop for counter
 		for (let counter = 0; counter < numb1; counter++) {
 			sum = sum + numb2
 		}
+		document.getElementById('numbers').innerHTML = "The product is " + sum
 	} else {
-		document.getElementById('error').innerHTML = "Please make sure your numbers are larger or equal to 0"
-		document.getElementById('numbers').innerHTML = ""
+		document.getElementById('numbers').innerHTML = "Please make sure your numbers are larger or equal to 0"
 	}
-
-	//Displays answer
-	document.getElementById('numbers').innerHTML = "The product is " + sum
 }
